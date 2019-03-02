@@ -14,7 +14,7 @@
          <!--collaborators and configuration for this bean go here-->
 
 
-    <bean id="cons1" class="com.stackroute.domain.Actor">
+    <bean id="actor" class="com.stackroute.domain.Actor">
         <constructor-arg index="0" value="Sallu"></constructor-arg>
         <constructor-arg index="1" value="Male"></constructor-arg>
         <constructor-arg index="2" value="34"></constructor-arg>
@@ -32,9 +32,9 @@
     <bean id="mo" class="com.stackroute.domain.Movie">
         <property name="actor" ref="actorId"></property>
     </bean>
-    <bean name="cosmo,cosmo2" scope="prototype" class="com.stackroute.domain.Movie">
-        <constructor-arg name="actor1" ref="cons1"></constructor-arg>
-        <constructor-arg name="actor2" ref="cons2"></constructor-arg>
-        <constructor-arg name="actor3"  ref="cons3"></constructor-arg>
+    <bean name="cosmo,cosmo2" autowire="byName" class="com.stackroute.domain.Movie">
+
     </bean>
+
+
 </beans>
