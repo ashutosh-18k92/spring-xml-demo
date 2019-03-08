@@ -35,7 +35,8 @@
     <bean name="cosmo,cosmo2" autowire="byName" class="com.stackroute.domain.Movie">
 
     </bean>
-    <bean name="beanLifecycle" class="com.stackroute.domain.BeanLifeCycleDemoBean" init-method="customInIt" destroy-method="customDestroy">
+    <bean name="beanLifecycle" class="com.stackroute.domain.BeanLifeCycleDemoBean" init-method="customInIt">
+    <bean name="beanLifecycle" class="com.stackroute.domain.BeanLifeCycleDemoBean" destroy-method="customDestroy">
 
     </bean>
 
